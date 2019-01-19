@@ -5,8 +5,14 @@ html, body {
   margin: 0;
 }
 
+h1 {
+  font-size: 50px;
+  margin: 0;
+}
+
 p {
   height: 26px;
+  font-size: 30px;
 }
 
 #container {

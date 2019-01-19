@@ -62,11 +62,13 @@ function hideAllCards(){
 }
 
 var attempts = 0
-function wrong() {
-  attempts++
-  if (attempts >= 5) {
-    alert('GAME OVER!')
-  }
+function gameOver() {
+  alert('GAME OVER!')
+  window.setTimeout(startOver, 1000)
+}
+
+function startOver(){
+  location.reload()
 }
 
 // generates message 
@@ -106,7 +108,10 @@ function revealCard(event) {    // this time, the click event is going to be the
         hideACard(cardsPicked[1]);
         cardsPicked = []
         message('no match')
-        wrong()
+        attempts++
+        if(attempts >= 5){
+          gameOver()
+        }
       }
       window.setTimeout(hidePickedCards, 1000);
     }
@@ -118,19 +123,3 @@ for (var i = 0; i < cards.length; i++) {
   cards[i].addEventListener("click", revealCard);
 }
 
-function gameOver(){
-  var newP = document.createElement('p');
-  newP.id = 'alert'
-  var over = document.getElementById('alert')
-  var text = 'GAME OVER'
-  over.appendChild(text)
-}
-
-// for(var i = 0; i < arrOfImages.length; i++){
-//   var node = document.getElementById('p');
-//   var text;
-//   if (arrOfImages[i] !== 'imgs/questionMark.png'){
-//     text = document.createTextNode('All Match!');
-//     node.appendChild(text);
-//   } 
-// }
