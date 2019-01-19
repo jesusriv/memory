@@ -5,6 +5,10 @@ html, body {
   margin: 0;
 }
 
+p {
+  height: 26px;
+}
+
 #container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
