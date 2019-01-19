@@ -1,0 +1,28 @@
+html, body {
+  font-family: 'Coiny', cursive;
+  color: rgb(105, 146, 194);
+  text-align: center;
+  margin: 0;
+}
+
+#container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  grid-gap: 5px;
+  list-style: none;
+  padding: 20px;
+}
+
+img {
+  border: 3px solid black;
+  width: 180px;
+  height: 180px;
+}
+
+#begin {
+  background-color: rgb(105, 146, 194);
+  color: #fff;
+  border-style: none;
+  width: 90px;
+  height: 30px;;
+}
