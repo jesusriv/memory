@@ -29,13 +29,16 @@ p {
   font-size: 30px;
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 600px) {
   img {
-    height: 90px;
-    width: 90px;
+    height: 120px;
+    width: 120px;
   }
 
   #container {
-    grid-template-columns: repeat(3, 120px;);
+    justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(3, 120px);
+    grid-gap: 20px;
   }
 }
