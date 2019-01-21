@@ -29,13 +29,13 @@ p {
   font-size: 30px;
 }
 
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 500px) {
   img {
     height: 90px;
     width: 90px;
   }
 
   #container {
-    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    grid-template-columns: repeat(3, 120px;);
   }
 }
