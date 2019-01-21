@@ -1,8 +1,8 @@
-var arrOfImages = ['imgs/down.jpg', 'imgs/bring.jpg', 'imgs/color.jpg', 
-                   'imgs/crumb.jpg', 'imgs/currents.jpg', 'imgs/every.jpg', 
-                   'imgs/happy.jpg', 'imgs/shadow-work.jpg', 'imgs/wings.jpg'];
-
-window.setTimeout(hideAllCards, 2000)
+var arrOfImages = ['imgs/down.jpg', 'imgs/bring.jpg', 
+                   'imgs/color.jpg','imgs/crumb.jpg', 
+                   'imgs/currents.jpg', 'imgs/every.jpg', 
+                   'imgs/happy.jpg', 'imgs/shadow-work.jpg', 
+                   'imgs/wings.jpg'];
 
 function doubleImages(arr) {
   for (var i = arr.length - 1; i >= 0; i--) {
@@ -11,7 +11,7 @@ function doubleImages(arr) {
   return arr;
 }
 
-doubleImages(arrOfImages)
+doubleImages(arrOfImages);
 
 function displayCards(arr) {
   // instead of a list, we're going to grab the empty div so we can add to it later
@@ -61,6 +61,8 @@ function hideAllCards(){
   }
 }
 
+window.setTimeout(hideAllCards, 2000)
+
 var attempts = 0
 function gameOver() {
   alert('GAME OVER!')
@@ -73,17 +75,17 @@ function startOver(){
 
 // generates message 
 function message(condition){
-  var node = document.getElementById('p');
+  var para = document.getElementById('p');
   var text;
   if(condition == 'match'){
     text = document.createTextNode('They match!');
-    node.appendChild(text);
+    para.appendChild(text);
   } else if(condition == 'no match'){
     text = document.createTextNode('Try again!');
-    node.appendChild(text);
+    para.appendChild(text);
   } 
-  var remove = () => node.removeChild(text);
-  window.setTimeout(remove, 1000)
+  var remove = () => para.removeChild(text);
+  window.setTimeout(remove, 900)
 }
 
 var cardsPicked = []

@@ -1,10 +1,23 @@
 html, body {
   font-family: 'Coiny', cursive;
   color: rgb(179, 60, 60);
-  text-align: center;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  text-align: center;
+}
+
+#container {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  grid-gap: 5px;
+}
+
+img {
+  border: 4px solid black;
+  height: 140px;
+  width: 140px;
+  justify-self: center;
 }
 
 h1 {
@@ -16,16 +29,13 @@ p {
   font-size: 30px;
 }
 
-#container {
-  width: 90vw;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-  grid-gap: 10px;
-}
+@media screen and (max-width: 700px) {
+  img {
+    height: 90px;
+    width: 90px;
+  }
 
-img {
-  border: 3px solid black;
-  width: 120px;
-  height: 120px;
-  justify-self: center;
+  #container {
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  }
 }
